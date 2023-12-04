@@ -5,9 +5,12 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
-export const navItems = [
-	{ id: 0, name: 'Main', slug: '/' },
-	{ id: 1, name: 'Categories', slug: '/categories' },
-	{ id: 2, name: 'About us', slug: '/about' },
-	{ id: 3, name: 'Contact', slug: '/contact' },
-];
+export const convertPrice = (price: number, exchangeRate: number, params: string) => {
+	if (params === 'en') {
+		const convertedPrice = price / exchangeRate;
+		const roundedPrice = Math.floor(convertedPrice * 10) / 10;
+		return roundedPrice.toFixed(2);
+	} else {
+		return price;
+	}
+};

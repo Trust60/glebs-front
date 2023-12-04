@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Trash } from 'lucide-react';
+import { Minus, Plus, Trash } from 'lucide-react';
 
 import { Product } from '@/types';
 import IconButton from '@/components/ui/icon-button';
@@ -48,27 +48,9 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
 						<p className="text-base font-semibold mb-2">{data.name}</p>
 					</div>
 					<div className="mb-2 flex flex-row items-center gap-1">
-						<svg
-							width="10"
-							height="10"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							onClick={() => cart.decreaseQuantity(data.id)}
-						>
-							<path d="M5 11H19V13H5V11Z" fill="black" />
-						</svg>
+						<Minus onClick={() => cart.decreaseQuantity(data.id)} className="w-4 h-4" />
 						{data.quantity}
-						<svg
-							width="10"
-							height="10"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							onClick={() => cart.increaseQuantity(data.id)}
-						>
-							<path d="M19 11H13V5H11V11H5V13H11V19H13V13H19V11Z" fill="black" />
-						</svg>
+						<Plus onClick={() => cart.increaseQuantity(data.id)} className="w-4 h-4" />
 					</div>
 					<Currency value={totalCost} />
 				</div>

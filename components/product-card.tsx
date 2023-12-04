@@ -1,24 +1,43 @@
 'use client';
 
-import { MouseEventHandler, useState } from 'react';
+import { MouseEventHandler, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ScanEye, ShoppingCart } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { Product } from '@/types';
 import IconButton from '@/components/ui/icon-button';
 import useCart from '@/hooks/use-cart';
 import { Skeleton } from './ui/skeleton';
+import { useRouter } from '@/navigation';
+import getExchangeRate from '@/actions/get-exchange-rate';
+import { convertPrice } from '@/lib/utils';
 
 type ProductCard = {
 	data: Product;
+	params: string;
 };
 
-const ProductCard: React.FC<ProductCard> = ({ data }) => {
+const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 	const [imageLoaded, setImageLoaded] = useState(false);
+	const [exchangeRate, setExchangeRate] = useState<number>(0);
 
 	const router = useRouter();
 	const cart = useCart();
+	const t = useTranslations();
+
+	useEffect(() => {
+		const fetchExchangeRate = async () => {
+			try {
+				const response = await getExchangeRate();
+				setExchangeRate(response?.rate || 0);
+			} catch (error) {
+				console.error('Error fetching exchange rate:', error);
+			}
+		};
+
+		fetchExchangeRate();
+	}, [params]);
 
 	const handleClick = () => {
 		router.push(`/product/${data?.id}`);
@@ -61,7 +80,10 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
 						<p>{data.name}</p>
 					</div>
 					<div className="font-bold text-stone-950">
-						<p>{data.price} UAH</p>
+						<p>
+							{params === 'en' && '$'}
+							{convertPrice(Number(data.price), exchangeRate, params)} {params === 'uk' && t('uah')}
+						</p>
 					</div>
 					<div className="text-sm text-green-500">
 						<p>{data.status}</p>

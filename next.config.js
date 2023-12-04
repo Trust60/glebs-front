@@ -1,8 +1,18 @@
+const withNextIntl = require('next-intl/plugin')();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ['res.cloudinary.com', 'i.imgur.com'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'i.imgur.com',
+			},
+		],
 	},
 };
-
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

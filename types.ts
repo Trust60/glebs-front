@@ -60,3 +60,11 @@ export interface Dimensions {
 	width: string;
 	height: string;
 }
+
+export interface ExchangeRate {
+	r030: number;
+	txt: string;
+	rate: number;
+	cc: string;
+	exchangedate: string;
+}

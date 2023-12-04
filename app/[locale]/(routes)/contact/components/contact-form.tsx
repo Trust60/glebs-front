@@ -6,6 +6,8 @@ import toast from 'react-hot-toast';
 
 import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
+import { useTranslations } from 'next-intl';
+import { cn } from '@/lib/utils';
 
 type FormFields = {
 	name: string;
@@ -14,6 +16,7 @@ type FormFields = {
 };
 
 const ContactForm = () => {
+	const t = useTranslations();
 	const {
 		register,
 		handleSubmit,
@@ -31,10 +34,10 @@ const ContactForm = () => {
 			});
 
 			if (response.status === 200) {
-				toast.success('The message has been sent successfully.');
+				toast.success(t('the-message-has-been-sent-successfully'));
 				reset();
 			} else {
-				toast.error('Something went wrong.');
+				toast.error(t('something-went-wrong'));
 			}
 		} catch (error) {
 			console.error('Error sending the message:', error);
@@ -43,10 +46,10 @@ const ContactForm = () => {
 	return (
 		<div className="mt-6 pb-4 md:w-2/3 lg:w-1/3 ">
 			<div className="text-2xl mt-10 mb-2">
-				<p>Send us a message</p>
+				<p>{t('send-us-a-message')}</p>
 			</div>
 			<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-				<label>Name</label>
+				<label>{t('name-0')}</label>
 				<Input
 					register={register}
 					formField="name"
@@ -55,19 +58,19 @@ const ContactForm = () => {
 					options={{
 						required: {
 							value: true,
-							message: 'Name is required',
+							message: t('name-is-required'),
 						},
 						maxLength: {
 							value: 20,
-							message: 'Name is too long',
+							message: t('name-is-too-long'),
 						},
 						minLength: {
 							value: 2,
-							message: 'Name is too short',
+							message: t('name-is-too-short'),
 						},
 						pattern: {
 							value: /^[A-Za-zА-Яа-яЁёІіЇїєЄ'']+$/,
-							message: 'Name should only contain letters',
+							message: t('name-should-only-contain-letters'),
 						},
 					}}
 				/>
@@ -80,36 +83,39 @@ const ContactForm = () => {
 					options={{
 						required: {
 							value: true,
-							message: 'Email is required',
+							message: t('email-is-required'),
 						},
 						pattern: {
 							value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/,
-							message: 'Enter a valid email address',
+							message: t('enter-a-valid-email-address'),
 						},
 					}}
 				/>
-				<label>Your question or message</label>
+				<label>{t('your-question-or-message')}</label>
 				<textarea
 					{...register('message', {
 						required: {
 							value: true,
-							message: 'Message is required',
+							message: t('message-is-required'),
 						},
 						minLength: {
 							value: 10,
-							message: 'Message is too short',
+							message: t('message-is-too-short'),
 						},
 					})}
-					className="border border-neutral-500/30 rounded py-2 px-3"
+					className={cn(
+						'border border-neutral-500/30 rounded py-2 px-3',
+						errors?.message?.message && 'border-red-600',
+					)}
 				/>
 				{errors?.message?.type === 'required' && (
-					<span className="text-red-600">Message is required</span>
+					<span className="text-red-600">{t('message-is-required')}</span>
 				)}
 				{errors?.message?.type === 'minLength' && (
-					<span className="text-red-600">Message is too short</span>
+					<span className="text-red-600">{t('message-is-too-short')}</span>
 				)}
 				<Button className="text-black border-black" type="submit">
-					Send a message
+					{t('send-a-message')}{' '}
 				</Button>
 			</form>
 		</div>

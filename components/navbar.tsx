@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 import NavbarActions from './navbar-actions';
-import { cn, navItems } from '@/lib/utils';
+import { cn } from '@/lib/utils';
+import { Link } from '@/navigation';
 
 type EventListener = (e: MouseEvent) => void;
 
@@ -25,6 +26,8 @@ const Navbar = () => {
 			document.removeEventListener('click', handleDocumentClick);
 		};
 	}, []);
+
+	const t = useTranslations();
 
 	return (
 		<>
@@ -51,12 +54,27 @@ const Navbar = () => {
 				</div>
 				<div className="hidden md:flex md:flex-1 md:text-white">
 					<ul className="md:flex md:flex-row md:gap-5 md:translate-x-[-50%]">
-						{navItems.map((item) => (
-							<li key={item.id}>
-								<Link href={item.slug}>{item.name}</Link>
-							</li>
-						))}
+						<li>
+							<Link href={'/'}>{t('main')}</Link>
+						</li>
+						<li>
+							<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+						</li>
+						<li>
+							<Link href={'/about'}>{t('about-us')}</Link>
+						</li>
+						<li>
+							<Link href={'/contact'}>{t('contact')}</Link>
+						</li>
 					</ul>
+				</div>
+				<div className="text-white gap-3 hidden md:flex mr-5">
+					<Link href={'/'} locale="en">
+						EN
+					</Link>
+					<Link href={'/'} locale="uk">
+						UK
+					</Link>
 				</div>
 				<NavbarActions />
 			</div>
@@ -66,12 +84,27 @@ const Navbar = () => {
 				} absolute z-20 w-full text-white text-xl text-center bg-neutral-800 border-t border-t-neutral-700 py-10 transition duration-300 ease-in-out`}
 			>
 				<ul className="space-y-7">
-					{navItems.map((item) => (
-						<li key={item.id}>
-							<Link href={item.slug}>{item.name}</Link>
-						</li>
-					))}
+					<li>
+						<Link href={'/'}>{t('main')}</Link>
+					</li>
+					<li>
+						<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+					</li>
+					<li>
+						<Link href={'/about'}>{t('about-us')}</Link>
+					</li>
+					<li>
+						<Link href={'/contact'}>{t('contact')}</Link>
+					</li>
 				</ul>
+				<div className="text-white gap-3 flex text-center justify-center mt-10">
+					<Link href={'/'} locale="en">
+						EN
+					</Link>
+					<Link href={'/'} locale="uk">
+						UK
+					</Link>
+				</div>
 			</div>
 		</>
 	);
