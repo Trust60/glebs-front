@@ -66,7 +66,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 						</div>
 						<ProductDescription data={product.description} />
 					</div>
-					<Keyinfo data={keyinfo} />
+					<Keyinfo items={keyinfo as any} />
 				</div>
 				<div className="font-bold text-2xl">{t('related-products')}</div>
 				<RelatedProductsSwiper items={suggestedProducts} params={params.locale} />
@@ -108,7 +108,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 					</div>
 					<ProductDescription data={product.description} />
 				</div>
-				<Keyinfo data={keyinfo} />
+				<Keyinfo items={keyinfo as any} />
 				<div className="font-bold text-2xl">{t('related-products')}</div>
 				<div className="xl:mx-10">
 					<RelatedProductsSwiper items={suggestedProducts} params={params.locale} />

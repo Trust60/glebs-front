@@ -4,10 +4,10 @@ import { Keyinfo as KeyinfoType } from '@/types';
 import Separator from './ui/separator';
 
 interface KeyinfoProps {
-	data: KeyinfoType;
+	items: KeyinfoType;
 }
 
-const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
+const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 	const t = useTranslations();
 	return (
 		<div className="md:flex md:justify-center md:gap-8 md:mb-5 xl:mx-20 xl:mt-5 xl:mb-5">
@@ -20,7 +20,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('country-of-manufacture')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.country}</p>
+						<p>{items.country}</p>
 					</div>
 				</div>
 				<Separator />
@@ -29,7 +29,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('volume')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.volume} L</p>
+						<p>{items.volume} L</p>
 					</div>
 				</div>
 				<Separator />
@@ -38,12 +38,12 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('colors')}</p>
 					</div>
 					<div className="font-semibold flex flex-row gap-1">
-						{data.colors.map((color, index) => {
+						{items.colors.map((color, index) => {
 							return (
 								<div key={color.id}>
 									<p>
 										{color.name}
-										{index < data.colors.length - 1 ? ',' : ''}
+										{index < items.colors.length - 1 ? ',' : ''}
 									</p>
 								</div>
 							);
@@ -56,7 +56,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('material')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.material}</p>
+						<p>{items.material}</p>
 					</div>
 				</div>
 				<Separator />
@@ -65,7 +65,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('weight')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.weight} kg</p>
+						<p>{items.weight} kg</p>
 					</div>
 				</div>
 				<Separator />
@@ -74,7 +74,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('by-type-of-construction')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.construction}</p>
+						<p>{items.construction}</p>
 					</div>
 				</div>
 				<Separator />
@@ -88,7 +88,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('length')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.dimensions.length} cm</p>
+						<p>{items.dimensions.length} cm</p>
 					</div>
 				</div>
 				<Separator />
@@ -97,7 +97,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('width')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.dimensions.width} cm</p>
+						<p>{items.dimensions.width} cm</p>
 					</div>
 				</div>
 				<Separator />
@@ -106,7 +106,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ data }) => {
 						<p>{t('height')}</p>
 					</div>
 					<div className="font-semibold">
-						<p>{data.dimensions.height} cm</p>
+						<p>{items.dimensions.height} cm</p>
 					</div>
 				</div>
 				<Separator />
