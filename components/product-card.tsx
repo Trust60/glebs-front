@@ -3,15 +3,14 @@
 import { MouseEventHandler, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ScanEye, ShoppingCart } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 import { Product } from '@/types';
 import IconButton from '@/components/ui/icon-button';
 import useCart from '@/hooks/use-cart';
 import { Skeleton } from './ui/skeleton';
-import { useRouter } from '@/navigation';
 import getExchangeRate from '@/actions/get-exchange-rate';
 import { convertPrice } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 type ProductCard = {
 	data: Product;
@@ -24,7 +23,6 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 
 	const router = useRouter();
 	const cart = useCart();
-	const t = useTranslations();
 
 	useEffect(() => {
 		const fetchExchangeRate = async () => {
@@ -82,7 +80,7 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 					<div className="font-bold text-stone-950">
 						<p>
 							{params === 'en' && '$'}
-							{convertPrice(Number(data.price), exchangeRate, params)} {params === 'uk' && t('uah')}
+							{convertPrice(Number(data.price), exchangeRate, params)} {params === 'uk' && 'uah'}
 						</p>
 					</div>
 					<div className="text-sm text-green-500">

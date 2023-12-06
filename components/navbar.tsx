@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 
 import NavbarActions from './navbar-actions';
 import { cn } from '@/lib/utils';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 
 type EventListener = (e: MouseEvent) => void;
 
@@ -26,8 +25,6 @@ const Navbar = () => {
 			document.removeEventListener('click', handleDocumentClick);
 		};
 	}, []);
-
-	const t = useTranslations();
 
 	return (
 		<>
@@ -55,16 +52,16 @@ const Navbar = () => {
 				<div className="hidden md:flex md:flex-1 md:text-white">
 					<ul className="md:flex md:flex-row md:gap-5 md:translate-x-[-50%]">
 						<li>
-							<Link href={'/'}>{t('main')}</Link>
+							<Link href={'/'}>main</Link>
 						</li>
 						<li>
-							<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+							<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>products</Link>
 						</li>
 						<li>
-							<Link href={'/about'}>{t('about-us')}</Link>
+							<Link href={'/about'}>about-us</Link>
 						</li>
 						<li>
-							<Link href={'/contact'}>{t('contact')}</Link>
+							<Link href={'/contact'}>contact</Link>
 						</li>
 					</ul>
 				</div>
@@ -85,16 +82,16 @@ const Navbar = () => {
 			>
 				<ul className="space-y-7">
 					<li>
-						<Link href={'/'}>{t('main')}</Link>
+						<Link href={'/'}>main</Link>
 					</li>
 					<li>
-						<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+						<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>products</Link>
 					</li>
 					<li>
-						<Link href={'/about'}>{t('about-us')}</Link>
+						<Link href={'/about'}>about-us</Link>
 					</li>
 					<li>
-						<Link href={'/contact'}>{t('contact')}</Link>
+						<Link href={'/contact'}>contact</Link>
 					</li>
 				</ul>
 				<div className="text-white gap-3 flex text-center justify-center mt-10">

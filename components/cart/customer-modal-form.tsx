@@ -7,7 +7,6 @@ import { toast } from 'react-hot-toast';
 import Button from '../ui/button';
 import useCart from '@/hooks/use-cart';
 import Input from '../ui/input';
-import { useTranslations } from 'next-intl';
 
 type FormInputs = {
 	firstName: string;
@@ -18,8 +17,6 @@ type FormInputs = {
 };
 
 const CustomerModalForm = () => {
-	const t = useTranslations();
-
 	const items = useCart((state) => state.items);
 	const removeAll = useCart((state) => state.removeAll);
 
@@ -31,7 +28,7 @@ const CustomerModalForm = () => {
 		formState: { errors },
 	} = useForm<FormInputs>({
 		defaultValues: {
-			country: t('ukraine'),
+			country: 'ukraine',
 			phone: '+380',
 		},
 		mode: 'onChange',
@@ -44,12 +41,12 @@ const CustomerModalForm = () => {
 		});
 
 		if (response.status === 200) {
-			toast.success(t('the-order-has-been-placed-successfully'));
+			toast.success('the-orderas-been-placed-successfully');
 			removeAll();
 		}
 
 		if (response.status === 400) {
-			toast.success(t('something-went-wrong'));
+			toast.success('somethingent-wrong');
 		}
 	};
 
@@ -69,7 +66,7 @@ const CustomerModalForm = () => {
 				disabled={items.length === 0}
 				className="w-full mt-6 bg-neutral-900"
 			>
-				{t('checkout')}
+				checkout
 			</Button>
 
 			<Transition appear show={isOpen} as={Fragment}>
@@ -102,36 +99,36 @@ const CustomerModalForm = () => {
 										as="h3"
 										className="text-lg font-medium leading-6 mb-5 text-gray-900"
 									>
-										{t('fill-out-the-fields')}{' '}
+										fill-out-the-fields{' '}
 									</Dialog.Title>
 									<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-										<label>{t('first-name')}</label>
+										<label>first-name</label>
 										<Input
 											register={register}
 											formField="firstName"
 											error={errors?.firstName?.message}
-											placeholder={t('john')}
+											placeholder="john"
 											type="text"
 											options={{
 												required: {
 													value: true,
-													message: t('name-is-required'),
+													message: 'name-is-required',
 												},
 												maxLength: {
 													value: 20,
-													message: t('name-is-too-long'),
+													message: 'name-is-too-long',
 												},
 												minLength: {
 													value: 2,
-													message: t('name-is-too-short'),
+													message: 'name-is-too-short',
 												},
 												pattern: {
 													value: /^[A-Za-zА-Яа-яЁёІіЇїєЄ'']+$/,
-													message: t('name-should-only-contain-letters'),
+													message: 'name-should-only-contain-letters',
 												},
 											}}
 										/>
-										<label>{t('phone-number')}</label>
+										<label>phone-number</label>
 										<Input
 											register={register}
 											formField="phone"
@@ -139,16 +136,16 @@ const CustomerModalForm = () => {
 											options={{
 												required: {
 													value: true,
-													message: t('phone-number-is-required'),
+													message: 'phone-number-is-required',
 												},
 												pattern: {
 													value: /^\+380\d{3}\d{2}\d{2}\d{2}$/,
-													message: t('phone-number-is-not-valid'),
+													message: 'phone-number-is-not-valid',
 												},
 											}}
 											type="text"
 										/>
-										<label>{t('country')}</label>
+										<label>country</label>
 										<Input
 											register={register}
 											formField="country"
@@ -157,52 +154,52 @@ const CustomerModalForm = () => {
 											options={{
 												required: {
 													value: true,
-													message: t('country-is-required'),
+													message: 'country-is-required',
 												},
 												minLength: {
 													value: 2,
-													message: t('value-is-too-short'),
+													message: 'value-is-too-short',
 												},
 											}}
 										/>
-										<label>{t('city')}</label>
+										<label>city</label>
 										<Input
 											register={register}
 											formField="city"
 											error={errors?.city?.message}
-											placeholder={t('kyiv')}
+											placeholder="kyiv"
 											type="text"
 											options={{
 												required: {
 													value: true,
-													message: t('city-is-required'),
+													message: 'city-is-required',
 												},
 												minLength: {
 													value: 2,
-													message: t('value-is-too-short'),
+													message: 'value-is-too-short',
 												},
 											}}
 										/>
-										<label>{t('address')}</label>
+										<label>address</label>
 										<Input
 											register={register}
 											formField="address"
 											error={errors?.address?.message}
-											placeholder={t('street-building')}
+											placeholder="street-building"
 											type="text"
 											options={{
 												required: {
 													value: true,
-													message: t('address-is-required'),
+													message: 'address-is-required',
 												},
 												minLength: {
 													value: 2,
-													message: t('address-is-too-short'),
+													message: 'address-is-too-short',
 												},
 											}}
 										/>
 										<Button className="border-black text-black mt-5" type="submit">
-											{t('submit')}{' '}
+											submit{' '}
 										</Button>
 									</form>
 								</Dialog.Panel>

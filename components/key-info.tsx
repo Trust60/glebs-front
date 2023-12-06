@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl';
-
 import { Keyinfo as KeyinfoType } from '@/types';
 import Separator from './ui/separator';
 
@@ -8,16 +6,15 @@ interface KeyinfoProps {
 }
 
 const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
-	const t = useTranslations();
 	return (
 		<div className="md:flex md:justify-center md:gap-8 md:mb-5 xl:mx-20 xl:mt-5 xl:mb-5">
 			<div className="mt-6 p-4 -mx-4 md:mx-0 md:w-full rounded-lg bg-neutral-900/5">
 				<div className="text-lg font-medium mb-2">
-					<p>{t('key-information')}</p>
+					<p>key-information</p>
 				</div>
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('country-of-manufacture')}</p>
+						<p>country-of-manufacture</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.country}</p>
@@ -26,7 +23,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('volume')}</p>
+						<p>volume</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.volume} L</p>
@@ -35,7 +32,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('colors')}</p>
+						<p>colors</p>
 					</div>
 					<div className="font-semibold flex flex-row gap-1">
 						{items.colors.map((color, index) => {
@@ -53,7 +50,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('material')}</p>
+						<p>material</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.material}</p>
@@ -62,7 +59,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('weight')}</p>
+						<p>weight</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.weight} kg</p>
@@ -71,7 +68,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('by-type-of-construction')}</p>
+						<p>by-type-of-construction</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.construction}</p>
@@ -81,11 +78,11 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 			</div>
 			<div className="mt-6 mb-8 p-4 -mx-4 md:mx-0 rounded-lg bg-neutral-900/5 md:w-full">
 				<div className="text-lg font-medium mb-2">
-					<p>{t('overall-dimensions')}</p>
+					<p>overall-dimensions</p>
 				</div>
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('length')}</p>
+						<p>length</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.dimensions.length} cm</p>
@@ -94,7 +91,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('width')}</p>
+						<p>width</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.dimensions.width} cm</p>
@@ -103,7 +100,7 @@ const Keyinfo: React.FC<KeyinfoProps> = ({ items }) => {
 				<Separator />
 				<div className="flex justify-between py-2">
 					<div>
-						<p>{t('height')}</p>
+						<p>height</p>
 					</div>
 					<div className="font-semibold">
 						<p>{items.dimensions.height} cm</p>

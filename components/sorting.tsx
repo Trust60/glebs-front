@@ -2,18 +2,15 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { ArrowDownUp } from 'lucide-react';
+import Link from 'next/link';
 import { Fragment } from 'react';
-import { useTranslations } from 'next-intl';
-
-import { Link } from '@/navigation';
 
 const Sorting = () => {
-	const t = useTranslations();
 	return (
 		<Menu as={'div'} className={'relative inline-block text-left'}>
 			<Menu.Button className={'flex flex-row-reverse gap-1 items-center'}>
 				<ArrowDownUp size={22} absoluteStrokeWidth={false} />
-				<p>{t('sort-by')}</p>
+				<p>sort-by</p>
 			</Menu.Button>
 			<Transition
 				as={Fragment}
@@ -38,7 +35,7 @@ const Sorting = () => {
 										active ? 'bg-lime-600 text-white' : 'text-gray-900'
 									} group flex w-full items-center rounded-md px-2 py-2 text-sm transition-all`}
 								>
-									{t('price-low-high')}{' '}
+									price-low-high{' '}
 								</Link>
 							)}
 						</Menu.Item>
@@ -50,7 +47,7 @@ const Sorting = () => {
 										active ? 'bg-lime-600 text-white' : 'text-gray-900'
 									} group flex w-full items-center rounded-md px-2 py-2 text-sm transition-all`}
 								>
-									{t('price-high-low')}{' '}
+									price-high-low{' '}
 								</Link>
 							)}
 						</Menu.Item>

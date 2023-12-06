@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-import { notFound } from 'next/navigation';
 
 import Navbar from '@/components/navbar';
 import ToastProvider from '@/providers/toast-provider';
@@ -8,9 +7,6 @@ import ScrollToTopArrow from '@/components/scroll-to-top-arrow';
 
 import './globals.css';
 import Footer from '@/components/footer';
-import { NextIntlClientProvider } from 'next-intl';
-
-const locales = ['en', 'uk'];
 
 const font = Open_Sans({ subsets: ['latin'] });
 
@@ -26,27 +22,14 @@ export default async function RootLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }) {
-	if (!locales.includes(locale as any)) notFound();
-
-	let messages;
-	try {
-		messages = (
-			await (locale === 'en' ? import('../../messages/en.json') : import(`../../messages/uk.json`))
-		).default;
-	} catch (error) {
-		notFound();
-	}
-
 	return (
-		<html lang={locale}>
+		<html lang="en">
 			<body className={font.className}>
-				<NextIntlClientProvider messages={messages}>
-					<ToastProvider />
-					<Navbar />
-					{children}
-					<Footer />
-					<ScrollToTopArrow />
-				</NextIntlClientProvider>
+				<ToastProvider />
+				<Navbar />
+				{children}
+				<Footer />
+				<ScrollToTopArrow />
 			</body>
 		</html>
 	);

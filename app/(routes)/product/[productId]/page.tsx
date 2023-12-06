@@ -1,19 +1,17 @@
 import { Undo2 } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
 
 import getProduct from '@/actions/get-product';
 import getProducts from '@/actions/get-products';
-import ProductsList from '@/components/ui/products-list';
 import Slider from '@/components/slider/slider';
 import getKeyInfo from '@/actions/get-keyinfo';
 import Keyinfo from '@/components/key-info';
 import ClientButtons from './components/client-buttons';
 import ProductDescription from './components/product-description';
-import { Link } from '@/navigation';
 import DeliveryAndPayment from '@/components/delivery-and-payment';
 import getExchangeRate from '@/actions/get-exchange-rate';
 import { convertPrice } from '@/lib/utils';
 import RelatedProductsSwiper from './components/related-products-swiper';
+import Link from 'next/link';
 
 interface ProductPageProps {
 	params: {
@@ -23,7 +21,6 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
-	const t = await getTranslations();
 	const product = await getProduct(params.productId);
 	const suggestedProducts = await getProducts({
 		categoryId: product?.category?.id,
@@ -39,7 +36,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 				<Link href={`/categories/${product.category.id}`}>
 					<div className="flex gap-2 items-center text-sm mb-5">
 						<Undo2 size={18} />
-						<p>{t('back-to-drone-backpacks')}</p>
+						<p>back-to-drone-backpacks</p>
 					</div>
 				</Link>
 				<div>
@@ -55,27 +52,27 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 					<div className="font-bold text-2xl mt-5">
 						<p>
 							{params.locale === 'en' && '$'}
-							{convertPrice(Number(product.price), exchangeRate, params.locale)}{' '}
-							{params.locale === 'uk' && t('uah')}
+							{convertPrice(Number(product.price), exchangeRate, params.locale)}
+							{params.locale === 'uk' && 'uah'}
 						</p>
 					</div>
 					<ClientButtons data={product} />
 					<div className="mt-5">
 						<div className="text-lg font-medium mb-2">
-							<p>{t('description')}:</p>
+							<p>description:</p>
 						</div>
 						<ProductDescription data={product.description} />
 					</div>
 					<Keyinfo items={keyinfo as any} />
 				</div>
-				<div className="font-bold text-2xl">{t('related-products')}</div>
+				<div className="font-bold text-2xl">related-products</div>
 				<RelatedProductsSwiper items={suggestedProducts} params={params.locale} />
 			</div>
 			<div className="my-3 mx-4 hidden md:block lg:mx-14">
 				<Link href={`/categories/${product.category.id}`}>
 					<div className="flex gap-2 items-center text-sm mb-5">
 						<Undo2 size={18} />
-						<p>{t('back-to-drone-backpacks')}</p>
+						<p>back-to-drone-backpacks</p>
 					</div>
 				</Link>
 				<div className="flex">
@@ -92,8 +89,8 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 						<div className="font-bold text-2xl mt-5">
 							<p>
 								{params.locale === 'en' && '$'}
-								{convertPrice(Number(product.price), exchangeRate, params.locale)}{' '}
-								{params.locale === 'uk' && t('uah')}
+								{convertPrice(Number(product.price), exchangeRate, params.locale)}
+								{params.locale === 'uk' && 'uah'}
 							</p>
 						</div>
 						<ClientButtons data={product} />
@@ -104,12 +101,12 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 				</div>
 				<div className="mt-5 md:mx-10 md:w-2/3 xl:w-2/4">
 					<div className="text-lg font-medium mb-2">
-						<p>{t('description')}:</p>
+						<p>description:</p>
 					</div>
 					<ProductDescription data={product.description} />
 				</div>
 				<Keyinfo items={keyinfo as any} />
-				<div className="font-bold text-2xl">{t('related-products')}</div>
+				<div className="font-bold text-2xl">related-products</div>
 				<div className="xl:mx-10">
 					<RelatedProductsSwiper items={suggestedProducts} params={params.locale} />
 				</div>

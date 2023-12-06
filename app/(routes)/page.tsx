@@ -1,12 +1,11 @@
 import { LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
 
 import getProducts from '@/actions/get-products';
 import ButtonWithIcon from '@/components/ui/button-with-icon';
 import ProductsList from '@/components/ui/products-list';
 import getCategories from '@/actions/get-categories';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 
 export default async function Home({
 	params,
@@ -17,7 +16,6 @@ export default async function Home({
 }) {
 	const categories = await getCategories();
 	const products = await getProducts({ isFeatured: true });
-	const t = await getTranslations();
 
 	return (
 		<main className="">
@@ -36,12 +34,12 @@ export default async function Home({
 					className="w-full lg:w-2/3 2xl:w-1/3 lg:mx-auto border-black text-black"
 					icon={<LayoutGrid />}
 				>
-					<Link href={`/categories/${categories.id}`}>{t('product-catalog')}</Link>
+					<Link href={`/categories/${categories.id}`}>product-catalog</Link>
 				</ButtonWithIcon>
 			</div>
 			<div className="pb-10">
 				<div className="text-3xl text-center">
-					<p>{t('popular-products')}</p>
+					<p>popular-products</p>
 				</div>
 				<ProductsList items={products} params={params.locale} />
 			</div>

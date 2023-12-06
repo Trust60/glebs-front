@@ -1,11 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 const ProductDescription = ({ data }: { data: string }) => {
-	const t = useTranslations();
-
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const handleClick = () => {
@@ -17,7 +14,7 @@ const ProductDescription = ({ data }: { data: string }) => {
 				<p>
 					{isExpanded ? data : `${data.slice(0, 200)}...`}
 					<span className="text-lime-600 font-semibold cursor-pointer" onClick={handleClick}>
-						{isExpanded ? t('show-less') : t('show-more')}
+						{isExpanded ? 'show-less' : 'show-more'}
 					</span>
 				</p>
 			) : (
