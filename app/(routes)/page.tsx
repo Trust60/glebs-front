@@ -1,10 +1,8 @@
 import { LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
 
-import getProducts from '@/actions/get-products';
 import ButtonWithIcon from '@/components/ui/button-with-icon';
 import ProductsList from '@/components/ui/products-list';
-import getCategories from '@/actions/get-categories';
 import Link from 'next/link';
 
 export default async function Home({
@@ -14,9 +12,6 @@ export default async function Home({
 		locale: string;
 	};
 }) {
-	const categories = await getCategories();
-	const products = await getProducts({ isFeatured: true });
-
 	return (
 		<main className="">
 			<div className="bg-slate-500 relative w-full h-[70vh] md:h-[75vh] 2xl:h-[80vh] mb-8">
@@ -33,15 +28,12 @@ export default async function Home({
 				<ButtonWithIcon
 					className="w-full lg:w-2/3 2xl:w-1/3 lg:mx-auto border-black text-black"
 					icon={<LayoutGrid />}
-				>
-					<Link href={`/categories/${categories.id}`}>product-catalog</Link>
-				</ButtonWithIcon>
+				></ButtonWithIcon>
 			</div>
 			<div className="pb-10">
 				<div className="text-3xl text-center">
 					<p>popular-products</p>
 				</div>
-				<ProductsList items={products} params={params.locale} />
 			</div>
 		</main>
 	);
