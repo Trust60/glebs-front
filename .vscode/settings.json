@@ -1,9 +1,0 @@
-{
-	"i18n-ally.localesPaths": ["messages"],
-	"i18n-ally.keystyle": "nested",
-	"i18n-ally.displayLanguage": "en",
-	"i18n-ally.extract.ignoredByFiles": {
-		"components\\footer.tsx": ["+38 098 123 1212"]
-	},
-	"i18n-ally.extract.ignored": ["10:00 - 18:00", "10:00 - 18:00"]
-}
