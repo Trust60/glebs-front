@@ -38,8 +38,8 @@ export default async function RootLayout({
 	try {
 		messages = (
 			await (locale === 'en'
-				? import('../../../messages/en.json')
-				: import(`../../../messages/uk.json`))
+				? import('../../messages/en.json')
+				: import(`../../messages/${locale}.json`))
 		).default;
 	} catch (error) {
 		notFound();

@@ -1,9 +1,16 @@
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import Separator from '@/components/ui/separator';
+import { locales } from '@/config';
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: { params: { locale: string } }) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	// Enable static rendering
+	unstable_setRequestLocale(params.locale);
 	const t = await getTranslations();
 	return (
 		<div className="pb-10">

@@ -1,8 +1,16 @@
 import { Clock, Home, Mail, Phone } from 'lucide-react';
-import ContactForm from './components/contact-form';
-import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function ContactPage() {
+import ContactForm from './components/contact-form';
+import { locales } from '@/config';
+
+export default async function ContactPage({ params }: { params: { locale: string } }) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	// Enable static rendering
+	unstable_setRequestLocale(params.locale);
 	const t = await getTranslations();
 	return (
 		<div className="px-4 flex flex-col md:flex-row-reverse md:gap-20 lg:gap-32 md:justify-end md:px-16">
