@@ -1,11 +1,13 @@
 'use client';
 
 import { Tab } from '@headlessui/react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
 
 const DeliveryAndPayment = () => {
+	const t = useTranslations();
 	return (
 		<>
 			<Tab.Group>
@@ -21,7 +23,7 @@ const DeliveryAndPayment = () => {
 							)
 						}
 					>
-						delivery{' '}
+						{t('delivery')}{' '}
 					</Tab>
 					<Tab
 						as="div"
@@ -34,17 +36,19 @@ const DeliveryAndPayment = () => {
 							)
 						}
 					>
-						payment{' '}
+						{t('payment')}{' '}
 					</Tab>
 				</Tab.List>
 				<div className="h-[2px] bg-neutral-300/60" />
 				<Tab.Panels className={'mt-4'}>
 					<Tab.Panel className={'leading-loose'}>
-						nova-poshta-in-ukraine-according-to-the-carriers-tariffs-address-delivery-by-nova-poshta-courier-according-to-the-carriers-tariffs-cash-on-delivery-20-uah-and-2-of-the-amount-of-goods,
+						{t(
+							'nova-poshta-in-ukraine-according-to-the-carriers-tariffs-address-delivery-by-nova-poshta-courier-according-to-the-carriers-tariffs-cash-on-delivery-20-uah-and-2-of-the-amount-of-goods',
+						)}
 					</Tab.Panel>
 					<Tab.Panel className={'leading-loose'}>
-						cash-on-delivery-or-card-upon-receipt-at-a-nova-poshta-branch <br />
-						cash-on-delivery-by-cash-or-card-upon-receipt-by-a-nova-poshta-courier
+						{t('cash-on-delivery-or-card-upon-receipt-at-a-nova-poshta-branch')} <br />
+						{t('cash-on-delivery-by-cash-or-card-upon-receipt-by-a-nova-poshta-courier')}
 					</Tab.Panel>
 				</Tab.Panels>
 			</Tab.Group>
