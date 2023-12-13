@@ -1,18 +1,22 @@
-import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+import type { Metadata } from 'next';
 
 import Navbar from '@/components/navbar';
 import ToastProvider from '@/providers/toast-provider';
 import ScrollToTopArrow from '@/components/scroll-to-top-arrow';
-
-import './globals.css';
 import Footer from '@/components/footer';
-import { NextIntlClientProvider } from 'next-intl';
 
-const locales = ['en', 'uk'];
+import { locales } from '@/config';
 
 const font = Open_Sans({ subsets: ['latin'] });
+
+export function generateStaticParams() {
+	return locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -28,10 +32,14 @@ export default async function RootLayout({
 }) {
 	if (!locales.includes(locale as any)) notFound();
 
+	unstable_setRequestLocale(locale);
+
 	let messages;
 	try {
 		messages = (
-			await (locale === 'en' ? import('../../messages/en.json') : import(`../../messages/uk.json`))
+			await (locale === 'en'
+				? import('../../../messages/en.json')
+				: import(`../../../messages/uk.json`))
 		).default;
 	} catch (error) {
 		notFound();

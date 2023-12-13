@@ -1,12 +1,14 @@
 import { LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 import getProducts from '@/actions/get-products';
 import ButtonWithIcon from '@/components/ui/button-with-icon';
 import ProductsList from '@/components/ui/products-list';
 import getCategories from '@/actions/get-categories';
 import { Link } from '@/navigation';
+import { locales } from '@/config';
 
 export default async function Home({
 	params,
@@ -15,6 +17,12 @@ export default async function Home({
 		locale: string;
 	};
 }) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	// Enable static rendering
+	unstable_setRequestLocale(params.locale);
+
 	const categories = await getCategories();
 	const products = await getProducts({ isFeatured: true });
 	const t = await getTranslations();
