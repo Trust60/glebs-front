@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import NavbarActions from './navbar-actions';
 import { cn } from '@/lib/utils';
 import { Link } from '@/navigation';
+import Image from 'next/image';
 
 type EventListener = (e: MouseEvent) => void;
 
@@ -49,10 +50,30 @@ const Navbar = () => {
 						}`}
 					></span>
 				</div>
-				<div className="text-2xl text-white flex-1 text-center md:flex">
-					<Link href={'/'}>Logo</Link>
+				<div className="hidden items-center -my-4 md:my-0 md:flex md:flex-1 md:mr-20 ">
+					<Link href={'/'}>
+						<Image
+							src={'https://i.imgur.com/BGc8FUU.png'}
+							width={200}
+							height={200}
+							quality={100}
+							alt="logo dronotorba"
+						/>
+					</Link>
 				</div>
-				<div className="hidden md:flex md:flex-1 md:text-white">
+
+				<div className="relative w-52 h-14 justify-center items-center flex-1 -my-4 md:my-0 md:hidden">
+					<Link href={'/'}>
+						<Image
+							src={'https://i.imgur.com/BGc8FUU.png'}
+							fill
+							className="object-contain"
+							alt="logo dronotorba"
+						/>
+					</Link>
+				</div>
+
+				<div className="hidden md:flex md:flex-1 md:-mr-24 lg:mr-0 md:text-white">
 					<ul className="md:flex md:flex-row md:gap-5 md:translate-x-[-50%]">
 						<li>
 							<Link href={'/'}>{t('main')}</Link>
@@ -68,6 +89,7 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
+
 				<div className="text-white gap-3 hidden md:flex mr-5">
 					<Link href={'/'} locale="en">
 						EN
