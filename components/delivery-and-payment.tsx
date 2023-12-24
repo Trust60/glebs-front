@@ -42,13 +42,15 @@ const DeliveryAndPayment = () => {
 				<div className="h-[2px] bg-neutral-300/60" />
 				<Tab.Panels className={'mt-4'}>
 					<Tab.Panel className={'leading-loose'}>
-						{t(
-							'nova-poshta-in-ukraine-according-to-the-carriers-tariffs-address-delivery-by-nova-poshta-courier-according-to-the-carriers-tariffs-cash-on-delivery-20-uah-and-2-of-the-amount-of-goods',
-						)}
+						{t('nova-poshta-mist-ekspres-samoviviz')} <br />{' '}
+						{t('dostavka-poshtovimi-sluzhbami-zdiisnyuyetsya-zgidno-tarifiv-pereviznika')}
 					</Tab.Panel>
 					<Tab.Panel className={'leading-loose'}>
-						{t('cash-on-delivery-or-card-upon-receipt-at-a-nova-poshta-branch')} <br />
-						{t('cash-on-delivery-by-cash-or-card-upon-receipt-by-a-nova-poshta-courier')}
+						{t(
+							'cash-on-delivery-or-payment-to-the-sole-proprietors-account-with-the-issuance-of-an-invoice-and-an-expense-invoice',
+						)}{' '}
+						<br />
+						{t('it-is-also-possible-to-arrange-olx-or-prom-delivery')}{' '}
 					</Tab.Panel>
 				</Tab.Panels>
 			</Tab.Group>

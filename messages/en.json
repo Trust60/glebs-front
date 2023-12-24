@@ -95,9 +95,10 @@
   "filters": "Filters",
   "drone-backpacks": "Drone Backpacks",
   "uah": "UAH",
-  "nova-poshta-in-ukraine-according-to-the-carriers-tariffs-address-delivery-by-nova-poshta-courier-according-to-the-carriers-tariffs-cash-on-delivery-20-uah-and-2-of-the-amount-of-goods": "\"Nova Poshta\" in Ukraine according to the carrier's tariffs Address delivery by Nova Poshta courier according to the carrier's tariffs (cash on delivery +20 UAH and + 2% of the amount of goods).",
-  "cash-on-delivery-or-card-upon-receipt-at-a-nova-poshta-branch": "Cash on delivery or card upon receipt at a Nova Poshta branch.",
-  "cash-on-delivery-by-cash-or-card-upon-receipt-by-a-nova-poshta-courier": "Cash on delivery by cash or card upon receipt by a Nova Poshta courier.",
   "payment": "Payment",
-  "delivery": "Delivery"
+  "delivery": "Delivery",
+  "nova-poshta-mist-ekspres-samoviviz": "Nova Poshta, Myst-Express, pickup.",
+  "dostavka-poshtovimi-sluzhbami-zdiisnyuyetsya-zgidno-tarifiv-pereviznika": "Delivery by postal services is carried out according to the tariffs of the delivery company.",
+  "cash-on-delivery-or-payment-to-the-sole-proprietors-account-with-the-issuance-of-an-invoice-and-an-expense-invoice": "Cash on delivery, or payment to the sole proprietor's account with the issuance of an invoice and an expense invoice.",
+  "it-is-also-possible-to-arrange-olx-or-prom-delivery": "It is also possible to arrange OLX or Prom delivery."
 }

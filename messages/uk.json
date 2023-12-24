@@ -97,7 +97,8 @@
   "uah": "грн",
   "payment": "Оплата",
   "delivery": "Доставка",
-  "nova-poshta-in-ukraine-according-to-the-carriers-tariffs-address-delivery-by-nova-poshta-courier-according-to-the-carriers-tariffs-cash-on-delivery-20-uah-and-2-of-the-amount-of-goods": "\"Нова Пошта\" по Україні за тарифами перевізника Адресна доставка кур'єром Нової Пошти за тарифами перевізника (накладений платіж 20 грн та 2% від суми товару).",
-  "cash-on-delivery-or-card-upon-receipt-at-a-nova-poshta-branch": "Накладений платіж або на картку при отриманні у відділенні Нової Пошти.",
-  "cash-on-delivery-by-cash-or-card-upon-receipt-by-a-nova-poshta-courier": "Накладений платіж готівкою або на картку при отриманні кур'єром Нової Пошти."
+  "nova-poshta-mist-ekspres-samoviviz": "Нова пошта, Мист-Експрес, самовивіз.",
+  "dostavka-poshtovimi-sluzhbami-zdiisnyuyetsya-zgidno-tarifiv-pereviznika": "Доставка поштовими службами здійсьнюється згідно тарифів перевизника.",
+  "cash-on-delivery-or-payment-to-the-sole-proprietors-account-with-the-issuance-of-an-invoice-and-an-expense-invoice": "Наложений платіж, або оплата на рахунок ФОП з виставленням рахунку та видаткової накладної.",
+  "it-is-also-possible-to-arrange-olx-or-prom-delivery": "Можливо також оформлення ОЛХ або Пром-доставки."
 }
