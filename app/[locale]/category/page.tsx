@@ -1,9 +1,25 @@
 import { Filter } from 'lucide-react';
+import { Metadata } from 'next';
 
 import getProducts from '@/actions/get-products';
 import ProductsList from '@/components/ui/products-list';
 import Sorting from '@/components/sorting';
 import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const t = await getTranslations({ locale });
+
+	return {
+		title: `${t('backpack-for-drones')}. ${t(
+			'sale-price-in-kyiv-army-special-bags-and-backpacks-from-dronotorba',
+		)}`,
+		description: t('high-quality-and-functional-backpacks-for-drones'),
+	};
+}
 
 export default async function ProductsListPage({
 	params,

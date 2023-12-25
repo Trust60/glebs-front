@@ -1,5 +1,6 @@
 import { Undo2 } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 
 import getProduct from '@/actions/get-product';
 import getProducts from '@/actions/get-products';
@@ -19,6 +20,20 @@ interface ProductPageProps {
 		productId: string;
 		categoryId: string;
 		locale: string;
+	};
+}
+
+export async function generateMetadata({
+	params: { productId },
+}: ProductPageProps): Promise<Metadata> {
+	const t = await getTranslations();
+	const product = await getProduct(productId);
+
+	return {
+		title: `${t('backpack-for-drones')} ${product.name}. ${t(
+			'sale-price-in-kyiv-army-special-bags-and-backpacks-from-dronotorba',
+		)}`,
+		description: product.description,
 	};
 }
 

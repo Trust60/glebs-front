@@ -5,7 +5,22 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Separator from '@/components/ui/separator';
 import { locales } from '@/config';
 
-export default async function AboutPage({ params }: { params: { locale: string } }) {
+type Props = {
+	params: {
+		locale: string;
+	};
+};
+
+export async function generateMetadata({ params: { locale } }: Props) {
+	const t = await getTranslations({ locale });
+
+	return {
+		title: t('about-dronotorba'),
+		description: t('vash-nadiinii-partner-u-virobnictvi-ryukzakiv-dlya-droniv'),
+	};
+}
+
+export default async function AboutPage({ params }: Props) {
 	const isValidLocale = locales.some((cur) => cur === params.locale);
 	if (!isValidLocale) notFound();
 

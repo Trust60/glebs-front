@@ -1,7 +1,7 @@
 import { Open_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import type { Metadata } from 'next';
 
@@ -18,10 +18,21 @@ export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-	title: 'Dроноторба',
-	description: 'Купляй рюкзаки для дронів у нас',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const t = await getTranslations({ locale });
+
+	return {
+		title: {
+			default: t('dronotorba-seo'),
+			template: `%s | ${t('dronotorba')}`,
+		},
+		description: t('vash-nadiinii-partner-u-virobnictvi-ryukzakiv-dlya-droniv'),
+	};
+}
 
 export default async function RootLayout({
 	children,

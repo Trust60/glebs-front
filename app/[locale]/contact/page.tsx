@@ -4,13 +4,27 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import ContactForm from './components/contact-form';
 import { locales } from '@/config';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const t = await getTranslations({ locale });
+
+	return {
+		title: t('contacts'),
+		description: t('address-phone-number-social-networks-of-the-company'),
+	};
+}
 
 export default async function ContactPage({ params }: { params: { locale: string } }) {
 	const isValidLocale = locales.some((cur) => cur === params.locale);
 	if (!isValidLocale) notFound();
 
-	// Enable static rendering
 	unstable_setRequestLocale(params.locale);
+
 	const t = await getTranslations();
 	return (
 		<div className="px-4 flex flex-col md:flex-row-reverse md:gap-20 lg:gap-32 md:justify-end md:px-16">
