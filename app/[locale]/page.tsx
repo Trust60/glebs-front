@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation';
 import getProducts from '@/actions/get-products';
 import ButtonWithIcon from '@/components/ui/button-with-icon';
 import ProductsList from '@/components/ui/products-list';
-import getCategories from '@/actions/get-categories';
 import { Link } from '@/navigation';
 import { locales } from '@/config';
 
@@ -22,7 +21,6 @@ export default async function Home({
 
 	unstable_setRequestLocale(params.locale);
 
-	const categories = await getCategories();
 	const products = await getProducts({ isFeatured: true });
 	const t = await getTranslations();
 
@@ -43,7 +41,7 @@ export default async function Home({
 					className="w-full lg:w-2/3 2xl:w-1/3 lg:mx-auto border-black text-black"
 					icon={<LayoutGrid />}
 				>
-					<Link href={`/categories/${categories.id}`}>{t('product-catalog')}</Link>
+					<Link href={`/category`}>{t('product-catalog')}</Link>
 				</ButtonWithIcon>
 			</div>
 			<div className="pb-10">

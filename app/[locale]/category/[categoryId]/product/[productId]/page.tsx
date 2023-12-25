@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server';
 
 import getProduct from '@/actions/get-product';
 import getProducts from '@/actions/get-products';
-import ProductsList from '@/components/ui/products-list';
 import Slider from '@/components/slider/slider';
 import getKeyInfo from '@/actions/get-keyinfo';
 import Keyinfo from '@/components/key-info';
@@ -18,6 +17,7 @@ import RelatedProductsSwiper from './components/related-products-swiper';
 interface ProductPageProps {
 	params: {
 		productId: string;
+		categoryId: string;
 		locale: string;
 	};
 }
@@ -36,7 +36,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 	return (
 		<>
 			<div className="my-3 mx-4 md:hidden">
-				<Link href={`/categories/${product.category.id}`}>
+				<Link href={'/category'}>
 					<div className="flex gap-2 items-center text-sm mb-5">
 						<Undo2 size={18} />
 						<p>{t('back-to-drone-backpacks')}</p>
@@ -72,7 +72,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 				<RelatedProductsSwiper items={suggestedProducts} params={params.locale} />
 			</div>
 			<div className="my-3 mx-4 hidden md:block lg:mx-14">
-				<Link href={`/categories/${product.category.id}`}>
+				<Link href={`/category`}>
 					<div className="flex gap-2 items-center text-sm mb-5">
 						<Undo2 size={18} />
 						<p>{t('back-to-drone-backpacks')}</p>

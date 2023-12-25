@@ -79,7 +79,7 @@ const Navbar = () => {
 							<Link href={'/'}>{t('main')}</Link>
 						</li>
 						<li>
-							<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+							<Link href={`/category`}>{t('products')}</Link>
 						</li>
 						<li>
 							<Link href={'/about'}>{t('about-us')}</Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
 						<Link href={'/'}>{t('main')}</Link>
 					</li>
 					<li>
-						<Link href={`/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79`}>{t('products')}</Link>
+						<Link href={`/category`}>{t('products')}</Link>
 					</li>
 					<li>
 						<Link href={'/about'}>{t('about-us')}</Link>

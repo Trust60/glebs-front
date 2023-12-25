@@ -63,9 +63,7 @@ const Footer = () => {
 							<Disclosure.Panel className="px-4 pb-2 pt-4 text-gray-300/60">
 								<ul className="flex flex-col gap-2">
 									<li>
-										<Link href={'/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79'}>
-											{t('products')}
-										</Link>
+										<Link href={'/category'}>{t('products')}</Link>
 									</li>
 									<li>
 										<Link href={'/about'}>{t('about-us')}</Link>
@@ -150,9 +148,7 @@ const Footer = () => {
 						</div>
 						<ul className="flex flex-col gap-2">
 							<li>
-								<Link href={'/categories/9aa91e4c-975b-4f6e-b20c-37719bb1df79'}>
-									{t('products')}
-								</Link>
+								<Link href={'/category'}>{t('products')}</Link>
 							</li>
 							<li>
 								<Link href={'/about'}>{t('about-us')}</Link>

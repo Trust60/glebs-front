@@ -10,7 +10,7 @@ interface Query {
 	sortBy?: string;
 }
 
-const getProducts = async (query: Query): Promise<Product[]> => {
+const getProducts = async (query: Query = {}): Promise<Product[]> => {
 	const { sortBy, ...restQuery } = query;
 	let url = qs.stringifyUrl({
 		url: URL,

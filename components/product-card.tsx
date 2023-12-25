@@ -21,7 +21,6 @@ type ProductCard = {
 const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const [exchangeRate, setExchangeRate] = useState<number>(0);
-
 	const router = useRouter();
 	const cart = useCart();
 	const t = useTranslations();
@@ -40,7 +39,7 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 	}, [params]);
 
 	const handleClick = () => {
-		router.push(`/product/${data?.id}`);
+		router.push(`/category/6067c704-fa29-4b3b-93bf-401cb6421792/product/${data?.id}`);
 	};
 
 	const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
