@@ -23,7 +23,11 @@ const getProducts = async (query: Query = {}): Promise<Product[]> => {
 		url += `?sortBy=${sortBy}`;
 	}
 
-	const res = await fetch(url);
+	const res = await fetch(url, {
+		next: {
+			revalidate: 60,
+		},
+	});
 	let products: Product[] = await res.json();
 
 	if (query.currentProductId) {
