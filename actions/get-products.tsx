@@ -20,7 +20,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
 	});
 
 	if (sortBy === 'priceAsc' || sortBy === 'priceDesc') {
-		url += `&sortBy=${sortBy}`;
+		url += `?sortBy=${sortBy}`;
 	}
 
 	const res = await fetch(url);

@@ -104,7 +104,9 @@ const Footer = () => {
 						<p>{t('terms-and-conditions')}</p>
 					</div>
 					<div>
-						<p>{t('fraud-disclaimer')}</p>
+						<Link href={'/public-offer'}>
+							<p>{t('public-offer')}</p>
+						</Link>
 					</div>
 					<div>
 						<p>{t('return-policy')}</p>
@@ -190,7 +192,9 @@ const Footer = () => {
 							<p>{t('terms-and-conditions')}</p>
 						</div>
 						<div>
-							<p>{t('fraud-disclaimer')}</p>
+							<Link href={'/public-offer'}>
+								<p>{t('public-offer')}</p>
+							</Link>
 						</div>
 						<div>
 							<p>{t('return-policy')}</p>

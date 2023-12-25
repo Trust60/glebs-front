@@ -20,7 +20,6 @@ export default async function Home({
 	const isValidLocale = locales.some((cur) => cur === params.locale);
 	if (!isValidLocale) notFound();
 
-	// Enable static rendering
 	unstable_setRequestLocale(params.locale);
 
 	const categories = await getCategories();

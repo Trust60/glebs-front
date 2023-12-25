@@ -13,7 +13,6 @@ export default async function ProductsListPage({
 	searchParams: { sortBy: string };
 }) {
 	const products = await getProducts({
-		categoryId: params.categoryId,
 		sortBy: searchParams.sortBy,
 	});
 

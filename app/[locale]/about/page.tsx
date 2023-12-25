@@ -43,7 +43,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
 					<p>
 						{t(
 							'dronetorba-is-not-just-a-brand-name-it-is-a-creative-space-where-ideas-are-born-and-dreams-come-true-we-dont-resell-we-design-and-sew-our-own-products-putting-our-love-of-aviation-and-desire-to-give-our-customers-something-special-into-each-design',
-						)}{' '}
+						)}
 					</p>
 				</div>
 				<div className="p-4 rounded-lg bg-neutral-900/5 md:w-2/3 md:mx-auto lg:w-2/5 2xl:w-2/5">
