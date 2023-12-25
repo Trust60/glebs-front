@@ -85,8 +85,20 @@ const Footer = () => {
 						<p className="font-medium mb-2">{t('social-media')}</p>
 					</div>
 					<div className="flex flex-row gap-5">
-						<Image src={instagram} width={35} height={35} alt="instagram icon" />
-
+						<a
+							href="https://www.instagram.com/dronotorba/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image src={instagram} width={35} height={35} alt="instagram icon" />
+						</a>
+						<a
+							href="https://www.facebook.com/Gleb.and.Alina.military.equipment/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image src={facebook} width={35} height={35} alt="facebook icon" />
+						</a>
 						<Image src={telegram} width={35} height={35} alt="telegram icon" />
 						<Image src={viber} width={35} height={35} alt="viber icon" />
 						<Image src={whatsapp} width={35} height={35} alt="whatsapp icon" />
