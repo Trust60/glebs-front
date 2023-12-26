@@ -1,8 +1,20 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 import Separator from '@/components/ui/separator';
+import { locales } from '@/config';
 
-export default async function ReturnPolicyPage() {
+type Props = {
+	params: {
+		locale: string;
+	};
+};
+
+export default async function ReturnPolicyPage({ params }: Props) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	unstable_setRequestLocale(params.locale);
 	const t = await getTranslations();
 	return (
 		<div className="px-20 py-6">

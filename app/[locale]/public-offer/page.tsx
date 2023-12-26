@@ -1,6 +1,8 @@
 import Separator from '@/components/ui/separator';
+import { locales } from '@/config';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 type Props = {
 	params: {
@@ -16,8 +18,12 @@ export async function generateMetadata({ params: { locale } }: Props) {
 	};
 }
 
-export default function PublicOfferPage() {
-	const t = useTranslations('');
+export default function PublicOfferPage({ params }: Props) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	unstable_setRequestLocale(params.locale);
+	const t = useTranslations();
 	return (
 		<div className="px-20 py-6">
 			<div className="text-3xl font-semibold p-2">

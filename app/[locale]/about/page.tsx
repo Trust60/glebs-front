@@ -24,7 +24,6 @@ export default async function AboutPage({ params }: Props) {
 	const isValidLocale = locales.some((cur) => cur === params.locale);
 	if (!isValidLocale) notFound();
 
-	// Enable static rendering
 	unstable_setRequestLocale(params.locale);
 	const t = await getTranslations();
 	return (

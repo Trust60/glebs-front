@@ -1,6 +1,9 @@
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+
 import Separator from '@/components/ui/separator';
+import { locales } from '@/config';
 import { Link } from '@/navigation';
-import { getTranslations } from 'next-intl/server';
 
 type Props = {
 	params: {
@@ -16,7 +19,11 @@ export async function generateMetadata({ params: { locale } }: Props) {
 	};
 }
 
-export default async function TermsAndConditionsPage() {
+export default async function TermsAndConditionsPage({ params }: Props) {
+	const isValidLocale = locales.some((cur) => cur === params.locale);
+	if (!isValidLocale) notFound();
+
+	unstable_setRequestLocale(params.locale);
 	const t = await getTranslations();
 	return (
 		<div className="px-20 py-6">
