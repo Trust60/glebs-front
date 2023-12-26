@@ -53,7 +53,9 @@ export default async function ContactPage({ params }: { params: { locale: string
 						<Mail className="w-4 h-4" />
 					</div>
 					<div>
-						<p>{t('email')}: dronotorba@gmail.com</p>
+						<p>
+							{t('email')}: <a href="mailto:dronotorba@gmail.com">dronotorba@gmail.com</a>
+						</p>
 					</div>
 				</div>
 				<div className="flex flex-row gap-2 items-center">

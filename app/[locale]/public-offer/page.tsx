@@ -1,5 +1,20 @@
 import Separator from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+type Props = {
+	params: {
+		locale: string;
+	};
+};
+
+export async function generateMetadata({ params: { locale } }: Props) {
+	const t = await getTranslations({ locale });
+
+	return {
+		title: t('public-offer'),
+	};
+}
 
 export default function PublicOfferPage() {
 	const t = useTranslations('');
@@ -12,7 +27,7 @@ export default function PublicOfferPage() {
 			<div className="text-2xl font-medium p-2">
 				<p>{t('general-terms')}</p>
 			</div>
-			<div className="">
+			<div>
 				<p>
 					{t(
 						'1-1-this-offer-is-an-official-offer-of-tm-dronotorba-hereinafter-referred-to-as-the-seller-to-conclude-a-contract-for-the-sale-of-goods-remotely-that-is-through-the-online-store-hereinafter-referred-to-as-the-agreement-and-places-the-public-offer-offer-on-the-official-website-of-the-seller-https-dronotorba-com-hereinafter-referred-to-as-the-website',

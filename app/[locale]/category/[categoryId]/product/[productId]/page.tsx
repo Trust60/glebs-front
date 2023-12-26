@@ -75,6 +75,9 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 						</p>
 					</div>
 					<ClientButtons data={product} />
+					<div className="mt-10">
+						<DeliveryAndPayment />
+					</div>
 					<div className="mt-5">
 						<div className="text-lg font-medium mb-2">
 							<p>{t('description')}:</p>

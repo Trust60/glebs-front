@@ -73,7 +73,7 @@ const Footer = () => {
 										<Link href={'/contact'}>{t('contact-us')}</Link>
 									</li>
 									<li>
-										<Link href={'/'}>{t('delivery-and-payment')}</Link>
+										<Link href={'/payment-delivery'}>{t('delivery-and-payment')}</Link>
 									</li>
 								</ul>
 							</Disclosure.Panel>
@@ -99,7 +99,9 @@ const Footer = () => {
 						>
 							<Image src={facebook} width={35} height={35} alt="facebook icon" />
 						</a>
-						<Image src={telegram} width={35} height={35} alt="telegram icon" />
+						<a href="https://t.me/+380734296529/" target="_blank" rel="noopener noreferrer">
+							<Image src={telegram} width={35} height={35} alt="telegram icon" />
+						</a>
 						<Image src={viber} width={35} height={35} alt="viber icon" />
 						<Image src={whatsapp} width={35} height={35} alt="whatsapp icon" />
 					</div>
@@ -110,10 +112,14 @@ const Footer = () => {
 				</div>
 				<div className="flex text-sm flex-col gap-3 justify-center sm:flex-row text-gray-300/60">
 					<div>
-						<p>{t('privacy-policy')}</p>
+						<Link href={'/privacy-policy'}>
+							<p>{t('privacy-policy')}</p>
+						</Link>
 					</div>
 					<div>
-						<p>{t('terms-and-conditions')}</p>
+						<Link href={'/terms-and-conditions'}>
+							<p>{t('terms-and-conditions')}</p>
+						</Link>
 					</div>
 					<div>
 						<Link href={'/public-offer'}>
@@ -121,7 +127,9 @@ const Footer = () => {
 						</Link>
 					</div>
 					<div>
-						<p>{t('return-policy')}</p>
+						<Link href={'/return-policy'}>
+							<p>{t('return-policy')}</p>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -144,7 +152,9 @@ const Footer = () => {
 								<Mail className="w-4 h-4" />
 							</div>
 							<div>
-								<p>dronotorba@gmail.com</p>
+								<a href="mailto:dronotorba@gmail.com">
+									<p>dronotorba@gmail.com</p>
+								</a>
 							</div>
 						</div>
 						<div className="flex flex-row gap-2 items-center">
@@ -171,7 +181,7 @@ const Footer = () => {
 								<Link href={'/contact'}>{t('contact-us')}</Link>
 							</li>
 							<li>
-								<Link href={'/'}>{t('delivery-and-payment')}</Link>
+								<Link href={'/payment-delivery'}>{t('delivery-and-payment')}</Link>
 							</li>
 						</ul>
 					</div>
@@ -194,7 +204,9 @@ const Footer = () => {
 							>
 								<Image src={facebook} width={35} height={35} alt="facebook icon" />
 							</a>
-							<Image src={telegram} width={35} height={35} alt="telegram icon" />
+							<a href="https://t.me/+380734296529/" target="_blank" rel="noopener noreferrer">
+								<Image src={telegram} width={35} height={35} alt="telegram icon" />
+							</a>
 							<Image src={viber} width={35} height={35} alt="viber icon" />
 							<Image src={whatsapp} width={35} height={35} alt="whatsapp icon" />
 						</div>
@@ -202,17 +214,21 @@ const Footer = () => {
 				</div>
 				<Separator />
 				<div className="flex items-center text-xs mt-4 md:flex-col md:gap-3 lg:flex-row">
-					<div className="">
+					<div>
 						<p>
 							© 2023 {t('dronotorba')}. {t('all-rights-reserved')}
 						</p>
 					</div>
 					<div className="flex flex-row justify-end w-3/5 gap-5 md:w-full md:justify-center lg:w-3/5 lg:justify-end">
 						<div>
-							<p>{t('privacy-policy')}</p>
+							<Link href={'/privacy-policy'}>
+								<p>{t('privacy-policy')}</p>
+							</Link>
 						</div>
 						<div>
-							<p>{t('terms-and-conditions')}</p>
+							<Link href={'/terms-and-conditions'}>
+								<p>{t('terms-and-conditions')}</p>
+							</Link>
 						</div>
 						<div>
 							<Link href={'/public-offer'}>
@@ -220,7 +236,9 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div>
-							<p>{t('return-policy')}</p>
+							<Link href={'/return-policy'}>
+								<p>{t('return-policy')}</p>
+							</Link>
 						</div>
 					</div>
 				</div>

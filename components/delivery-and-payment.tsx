@@ -3,8 +3,11 @@
 import { Tab } from '@headlessui/react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
+
+import selfDelivery from '@/images/icons/self-delivery.svg';
 
 const DeliveryAndPayment = () => {
 	const t = useTranslations();
@@ -42,15 +45,40 @@ const DeliveryAndPayment = () => {
 				<div className="h-[2px] bg-neutral-300/60" />
 				<Tab.Panels className={'mt-4'}>
 					<Tab.Panel className={'leading-loose'}>
-						{t('nova-poshta-mist-ekspres-samoviviz')} <br />{' '}
+						<div className="flex flex-row justify-between px-3">
+							<Image
+								src="https://i.imgur.com/l4i3x5K.png"
+								alt="Nova poshta"
+								width={90}
+								height={90}
+								className="object-contain "
+							/>
+							<Image
+								src="https://i.imgur.com/LV3cPWd.png"
+								alt="Meest Express"
+								width={80}
+								height={80}
+								className="object-contain"
+							/>
+							<Image
+								src={selfDelivery}
+								alt="Self delivery"
+								width={50}
+								height={50}
+								className="object-contain"
+							/>
+						</div>
+						{t('nova-poshta-mist-ekspres-samoviviz')} <br />
+						<br />
 						{t('dostavka-poshtovimi-sluzhbami-zdiisnyuyetsya-zgidno-tarifiv-pereviznika')}
 					</Tab.Panel>
 					<Tab.Panel className={'leading-loose'}>
 						{t(
 							'cash-on-delivery-or-payment-to-the-sole-proprietors-account-with-the-issuance-of-an-invoice-and-an-expense-invoice',
-						)}{' '}
+						)}
 						<br />
-						{t('it-is-also-possible-to-arrange-olx-or-prom-delivery')}{' '}
+						<br />
+						{t('it-is-also-possible-to-arrange-olx-or-prom-delivery')}
 					</Tab.Panel>
 				</Tab.Panels>
 			</Tab.Group>
