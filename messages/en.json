@@ -23,7 +23,6 @@
   "products": "Products",
   "contact-us": "Contact us",
   "delivery-and-payment": "Delivery and payment",
-  "33-velyka-vasylkivska-street-kyiv-ukraine": "33 Velyka Vasylkivska Street, Kyiv, Ukraine",
   "telephone": "Telephone",
   "email": "Email",
   "work-schedule": "Work schedule",
@@ -195,7 +194,6 @@
   "the-order-will-be-packed-and-shipped-after-receiving-the-payment-within-1-2-business-days": "The order will be packed and shipped after receiving the payment within 1-2 business days.",
   "if-you-have-any-questions-about-your-order-please-contact-us": "If you have any questions about your order, please contact us:",
   "delivery-across-kyiv-and-ukraine": "Delivery across Kyiv and Ukraine:",
-  "pickup-from-our-production-hall-at-the-address-kyiv": "- Pickup from our production hall at the address: Kyiv.",
   "nova-poshta-mist-express-delivery-to-the-post-office-orders-are-sent-after-100-payment-for-the-product": "- Nova Poshta, Mist-Express. Delivery to the post office. Orders are sent after 100% payment for the product.",
   "payment-options": "Payment options:",
   "transfer-to-the-bank-account-according-to-the-banking-details": "- Transfer to the bank account according to the banking details.",
@@ -242,5 +240,7 @@
   "pursuant-to-part-3-of-article-29-of-the-law-of-ukraine-on-personal-data-protection-the-member-states-of-the-european-economic-area-as-well-as-the-states-that-have-signed-the-council-of-europe-convention-for-the-protection-of-individuals-with-regard-to-automatic-processing-of-personal-data-are-recognized-as-ensuring-an-adequate-level-of-personal-data-protection": "Pursuant to Part 3 of Article 29 of the Law of Ukraine \"On Personal Data Protection\", the member states of the European Economic Area, as well as the states that have signed the Council of Europe Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data, are recognized as ensuring an adequate level of personal data protection.",
   "by-providing-us-with-your-personal-data-you-consent-to-the-transfer-of-your-personal-data-as-set-forth-in-this-section-and-do-not-require-notification-of-such-transfer-otherwise-you-should-stop-using-the-website-https-dronotba-com-and-not-provide-us-with-your-personal-data": "By providing us with your personal data, you consent to the transfer of your personal data as set forth in this section and do not require notification of such transfer. Otherwise, you should stop using the website https://dronotba.com/ and not provide us with your personal data.",
   "backups-containing-your-personal-data-will-be-deleted-in-a-standardized-manner-through-gradual-overwriting-and-cannot-be-accessed-in-the-usual-way": "Backups containing your personal data will be deleted in a standardized manner through gradual overwriting and cannot be accessed in the usual way.",
-  "this-privacy-policy-may-be-updated-and-modified-for-example-due-to-changes-in-data-protection-laws-and-practices-we-recommend-that-you-stay-informed-of-any-changes-to-the-privacy-policy": "This Privacy Policy may be updated and modified, for example, due to changes in data protection laws and practices. We recommend that you stay informed of any changes to the Privacy Policy."
+  "this-privacy-policy-may-be-updated-and-modified-for-example-due-to-changes-in-data-protection-laws-and-practices-we-recommend-that-you-stay-informed-of-any-changes-to-the-privacy-policy": "This Privacy Policy may be updated and modified, for example, due to changes in data protection laws and practices. We recommend that you stay informed of any changes to the Privacy Policy.",
+  "pickup-from-our-workshop-at-the-address-15-chornobylska-st-kyiv": "- Pickup from our workshop at the address: 15, Chornobylska St., Kyiv.",
+  "15-chornobylska-st-kyiv": "15, Chornobylska St., Kyiv."
 }

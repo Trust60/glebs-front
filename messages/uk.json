@@ -22,7 +22,6 @@
   "products": "Товари",
   "contact-us": "Зв'язатись з нами",
   "delivery-and-payment": "Доставка та оплата",
-  "33-velyka-vasylkivska-street-kyiv-ukraine": "Велика Васильківська, 33, Київ, Україна",
   "telephone": "Телефон",
   "email": "Електронна адреса",
   "work-schedule": "Графік роботи",
@@ -195,7 +194,6 @@
   "the-order-will-be-packed-and-shipped-after-receiving-the-payment-within-1-2-business-days": "Замовлення буде запаковано та відправлено після отримання оплати протягом 1-2 робочих днів.",
   "if-you-have-any-questions-about-your-order-please-contact-us": "Якщо у вас виникли запитання щодо замовлення, зв’яжіться з нами:",
   "delivery-across-kyiv-and-ukraine": "Доставка по Києву та Україні:",
-  "pickup-from-our-production-hall-at-the-address-kyiv": "- Самовивіз з нашого виробничого цеху за адресою: м. Київ.",
   "nova-poshta-mist-express-delivery-to-the-post-office-orders-are-sent-after-100-payment-for-the-product": "- Нова Пошта, Міст-Експрес. Доставка до поштового відділення. Замовлення відправляються після 100% оплати товару.",
   "payment-options": "Варіанти оплати:",
   "transfer-to-the-bank-account-according-to-the-banking-details": "- Переказ на банківський рахунок згідно банківських реквізитів.",
@@ -242,5 +240,7 @@
   "pursuant-to-part-3-of-article-29-of-the-law-of-ukraine-on-personal-data-protection-the-member-states-of-the-european-economic-area-as-well-as-the-states-that-have-signed-the-council-of-europe-convention-for-the-protection-of-individuals-with-regard-to-automatic-processing-of-personal-data-are-recognized-as-ensuring-an-adequate-level-of-personal-data-protection": "Відповідно до ч.2 ст.29 Закону України «Про захист персональних даних» держави-учасниці Європейського економічного простору, а також держави, які підписали Конвенцію Ради Європи про захист осіб щодо автоматичного обробки персональних даних визнається забезпеченням належного рівня захисту персональних даних.",
   "by-providing-us-with-your-personal-data-you-consent-to-the-transfer-of-your-personal-data-as-set-forth-in-this-section-and-do-not-require-notification-of-such-transfer-otherwise-you-should-stop-using-the-website-https-dronotba-com-and-not-provide-us-with-your-personal-data": "Надаючи нам свої персональні дані, ви погоджуєтеся на передачу своїх персональних даних, як зазначено в цьому розділі, і не потребуєте повідомлення про таку передачу. В іншому випадку вам слід припинити використання веб-сайту https://dronotba.com/ і не надавати нам свої особисті дані.",
   "backups-containing-your-personal-data-will-be-deleted-in-a-standardized-manner-through-gradual-overwriting-and-cannot-be-accessed-in-the-usual-way": "Резервні копії, що містять ваші особисті дані, будуть видалені стандартизованим способом шляхом поступового перезапису, і до них неможливо отримати звичайний доступ.",
-  "this-privacy-policy-may-be-updated-and-modified-for-example-due-to-changes-in-data-protection-laws-and-practices-we-recommend-that-you-stay-informed-of-any-changes-to-the-privacy-policy": "Ця Політика конфіденційності може бути оновлена ​​та змінена, наприклад, у зв’язку зі змінами законодавства та практики захисту даних. Ми рекомендуємо вам бути в курсі будь-яких змін у Політиці конфіденційності."
+  "this-privacy-policy-may-be-updated-and-modified-for-example-due-to-changes-in-data-protection-laws-and-practices-we-recommend-that-you-stay-informed-of-any-changes-to-the-privacy-policy": "Ця Політика конфіденційності може бути оновлена ​​та змінена, наприклад, у зв’язку зі змінами законодавства та практики захисту даних. Ми рекомендуємо вам бути в курсі будь-яких змін у Політиці конфіденційності.",
+  "pickup-from-our-workshop-at-the-address-15-chornobylska-st-kyiv": "- Самовивіз з нашої майстерні за адресою: м. Київ, вул. Чорнобильська, 15.",
+  "15-chornobylska-st-kyiv": "м. Київ, вул. Чорнобильська, 15."
 }

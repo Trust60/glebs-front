@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: { params: { locale: string
 						<Home className="w-4 h-4" />
 					</div>
 					<div>
-						<p>{t('33-velyka-vasylkivska-street-kyiv-ukraine')}</p>
+						<p>{t('15-chornobylska-st-kyiv')}</p>
 					</div>
 				</div>
 				<div className="flex flex-row gap-2 items-center">

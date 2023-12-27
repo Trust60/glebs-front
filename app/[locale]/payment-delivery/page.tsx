@@ -90,7 +90,7 @@ export default async function PaymentDeliveryPage({ params }: Props) {
 			</div>
 			<div>
 				<ul>
-					<li>{t('pickup-from-our-production-hall-at-the-address-kyiv')}</li>
+					<li>{t('pickup-from-our-workshop-at-the-address-15-chornobylska-st-kyiv')}</li>
 					<li>
 						{t(
 							'nova-poshta-mist-express-delivery-to-the-post-office-orders-are-sent-after-100-payment-for-the-product',
