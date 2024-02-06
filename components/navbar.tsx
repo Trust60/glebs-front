@@ -73,7 +73,7 @@ const Navbar = () => {
 					</Link>
 				</div>
 
-				<div className="hidden md:flex md:flex-1 md:-mr-24 lg:mr-0 md:text-white xl:text-lg">
+				<div className="hidden md:flex md:flex-1 md:-mr-24 lg:mr-0 md:text-white xl:text-xl">
 					<ul className="md:flex md:flex-row md:gap-5 md:translate-x-[-50%]">
 						<li>
 							<Link href={'/'}>{t('main')}</Link>
@@ -120,6 +120,9 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link href={'/contact'}>{t('contact')}</Link>
+					</li>
+					<li>
+						<Link href={'/payment-delivery'}>{t('delivery-and-payment-0')}</Link>
 					</li>
 				</ul>
 				<div className="text-white gap-3 flex text-center justify-center mt-10">

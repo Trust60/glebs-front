@@ -22,7 +22,7 @@
   "information": "Information",
   "products": "Products",
   "contact-us": "Contact us",
-  "delivery-and-payment": "Delivery and payment",
+  "delivery-and-payment": "Delivery",
   "telephone": "Telephone",
   "email": "Email",
   "work-schedule": "Work schedule",
@@ -242,5 +242,6 @@
   "backups-containing-your-personal-data-will-be-deleted-in-a-standardized-manner-through-gradual-overwriting-and-cannot-be-accessed-in-the-usual-way": "Backups containing your personal data will be deleted in a standardized manner through gradual overwriting and cannot be accessed in the usual way.",
   "this-privacy-policy-may-be-updated-and-modified-for-example-due-to-changes-in-data-protection-laws-and-practices-we-recommend-that-you-stay-informed-of-any-changes-to-the-privacy-policy": "This Privacy Policy may be updated and modified, for example, due to changes in data protection laws and practices. We recommend that you stay informed of any changes to the Privacy Policy.",
   "pickup-from-our-workshop-at-the-address-15-chornobylska-st-kyiv": "- Pickup from our workshop at the address: 15, Chornobylska St., Kyiv.",
-  "15-chornobylska-st-kyiv": "15, Chornobylska St., Kyiv."
+  "15-chornobylska-st-kyiv": "15, Chornobylska St., Kyiv.",
+  "delivery-and-payment-0": "Delivery and payment"
 }

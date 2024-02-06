@@ -4,12 +4,8 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 
 import { Product } from '@/types';
 
-interface CartItem extends Product {
-	quantity: number;
-}
-
 type CartStore = {
-	items: CartItem[];
+	items: Product[];
 	addItem: (data: Product) => void;
 	removeItem: (id: string) => void;
 	removeAll: () => void;

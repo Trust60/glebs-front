@@ -15,6 +15,8 @@ import Separator from './ui/separator';
 
 const Footer = () => {
 	const t = useTranslations();
+
+	const currentYear = new Date().getFullYear();
 	return (
 		<>
 			<div className="flex flex-col text-white px-5 py-4 md:px-10 bg-neutral-800 relative md:hidden">
@@ -108,7 +110,9 @@ const Footer = () => {
 				</div>
 				<Separator />
 				<div className="text-center mt-4 text-sm mb-5">
-					<p>© 2023. {t('dronotorba')}</p>
+					<p>
+						© {currentYear}. {t('dronotorba')}
+					</p>
 				</div>
 				<div className="flex text-sm flex-col gap-3 justify-center sm:flex-row text-gray-300/60">
 					<div>
@@ -213,10 +217,10 @@ const Footer = () => {
 					</div>
 				</div>
 				<Separator />
-				<div className="flex items-center text-xs mt-4 md:flex-col md:gap-3 lg:flex-row">
+				<div className="flex items-center text-gray-300/60 text-xs mt-4 md:flex-col md:gap-3 lg:flex-row">
 					<div>
 						<p>
-							© 2023 {t('dronotorba')}. {t('all-rights-reserved')}
+							© {currentYear}. {t('dronotorba')}. {t('all-rights-reserved')}
 						</p>
 					</div>
 					<div className="flex flex-row justify-end w-3/5 gap-5 md:w-full md:justify-center lg:w-3/5 lg:justify-end">
