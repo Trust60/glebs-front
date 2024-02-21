@@ -38,17 +38,25 @@ const CustomerModalForm = () => {
 	});
 
 	const onSubmit: SubmitHandler<FormInputs> = async (data) => {
-		const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-			...data,
-			productIds: items.map((item) => item.id),
-		});
+		try {
+			const responseArray = await Promise.all([
+				axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+					...data,
+					productIds: items.map((item) => item.id),
+				}),
+				axios.post('https://hook.eu2.make.com/pyw6iqkuorywlfedmm6fj2yum1ysgxby', {
+					...data,
+					productIds: items.map((item) => item.id),
+				}),
+			]);
 
-		if (response.status === 200) {
-			toast.success(t('the-order-has-been-placed-successfully'));
-			removeAll();
-		}
+			const allRequestsSuccessful = responseArray.every((response) => response.status === 200);
 
-		if (response.status === 400) {
+			if (allRequestsSuccessful) {
+				toast.success(t('the-order-has-been-placed-successfully'));
+				removeAll();
+			}
+		} catch (error) {
 			toast.success(t('something-went-wrong'));
 		}
 	};
