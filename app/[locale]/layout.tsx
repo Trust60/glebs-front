@@ -2,6 +2,7 @@ import { Open_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { Analytics } from "@vercel/analytics/react"
 
 import type { Metadata } from 'next';
 
@@ -63,6 +64,7 @@ export default async function RootLayout({
 					<ToastProvider />
 					<Navbar />
 					{children}
+					<Analytics/>
 					<Footer />
 					<ScrollToTopArrow />
 				</NextIntlClientProvider>
