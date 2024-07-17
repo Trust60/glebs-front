@@ -22,7 +22,7 @@ export default async function Home({
 
 	unstable_setRequestLocale(params.locale);
 
-	// const products = await getProducts({ isFeatured: true });
+	const products = await getProducts({ isFeatured: true });
 	const t = await getTranslations();
 
 	return (
@@ -32,7 +32,7 @@ export default async function Home({
 				<div className="text-3xl text-center">
 					<p>{t('popular-products')}</p>
 				</div>
-				{/* <ProductsList items={products} params={params.locale} /> */}
+				<ProductsList items={products} params={params.locale} />
 			</div>
 		</main>
 	);
