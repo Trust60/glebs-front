@@ -61,7 +61,7 @@ const DeliveryAndPayment = () => {
 								className="object-contain"
 							/>
 							<Image
-								src={selfDelivery}
+								src="https://i.imgur.com/S5SHppA.png"
 								alt="Self delivery"
 								width={50}
 								height={50}
