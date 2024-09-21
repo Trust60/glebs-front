@@ -59,7 +59,7 @@ const Slider = ({ data }: SliderProps) => {
 					))}
 				</Swiper>
 			</div>
-			<div className="px-20 relative hidden sm:block xl:px-36">
+			<div className="px-20 relative hidden sm:block xl:px-36" style={{paddingLeft: window.innerWidth >= 1990 ? '20rem' : '', paddingRight: window.innerWidth >= 1990 ? '20rem' : ''}}>
 				<PrevSlider swiperRef={swiperRef} />
 				<Swiper
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -71,9 +71,9 @@ const Slider = ({ data }: SliderProps) => {
 					{data.images.map((image) => (
 						<SwiperSlide key={image.id}>
 							<div className="swiper-zoom-container">
-								<div className="block w-full h-[600px]">
+								<div className="block w-full h-[600px]" style={{height: window.innerWidth >= 1990 ? '65vh': ''}}>
 									{!imageLoaded && (
-										<Skeleton className="w-full h-[600px] rounded-xl bg-neutral-900/10" />
+										<Skeleton className="w-full h-[600px] rounded-xl bg-neutral-900/10" style={{height: window.innerWidth >= 1990 ? '65vh': ''}} />
 									)}
 
 									<Image
@@ -111,6 +111,10 @@ const Slider = ({ data }: SliderProps) => {
 						},
 						1280: {
 							slidesPerView: 7,
+							spaceBetween: 10,
+						},
+						1736: {
+							slidesPerView: 12,
 							spaceBetween: 10,
 						},
 					}}

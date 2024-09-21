@@ -12,7 +12,7 @@ const ProductDescription = ({ data }: { data: string }) => {
 		setIsExpanded(!isExpanded);
 	};
 	return (
-		<div>
+		<div style={{ whiteSpace: 'pre-wrap' }}>
 			{data.length > 200 ? (
 				<p>
 					{isExpanded ? data : `${data.slice(0, 200)}...`}

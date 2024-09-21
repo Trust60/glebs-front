@@ -21,6 +21,7 @@ type ProductCard = {
 const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const [exchangeRate, setExchangeRate] = useState<number>(0);
+	const [truncatedName, setTruncatedName] = useState(data.name);
 	const router = useRouter();
 	const cart = useCart();
 	const t = useTranslations();
@@ -38,6 +39,25 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 		fetchExchangeRate();
 	}, [params]);
 
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 1990) {
+				setTruncatedName(data.name.length > 56 ? data.name.substring(0, 56) + '...' : data.name);
+			} else if (window.innerWidth >= 1536) {
+				setTruncatedName(data.name.length > 28 ? data.name.substring(0, 28) + '...' : data.name);
+			} else {
+				setTruncatedName(data.name.length > 20 ? data.name.substring(0, 20) + '...' : data.name);
+			}
+		};
+
+		handleResize(); 
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [data.name]);
+
 	const handleClick = () => {
 		router.push(`/category/6067c704-fa29-4b3b-93bf-401cb6421792/product/${data?.id}`);
 	};
@@ -50,9 +70,9 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 	return (
 		<div onClick={handleClick} className="flex group flex-col">
 			<div className="border rounded-xl shadow-lg">
-				<div className="relative w-full h-[35vh] sm:h-[40vh] lg:h-[45vh]">
+				<div className="relative w-full h-[35vh] sm:h-[40vh] lg:h-[45vh] min-[1756px]:h-[60vh]">
 					{!imageLoaded && (
-						<Skeleton className="w-full h-[35vh] sm:h-[40vh] lg:h-[45vh] rounded-t-xl bg-neutral-900/10" />
+						<Skeleton className="w-full h-[35vh] sm:h-[40vh] lg:h-[45vh] min-[1756px]:h-[60vh] rounded-t-xl bg-neutral-900/10" />
 					)}
 					<Image
 						className="object-cover aspect-square rounded-t-xl"
@@ -76,7 +96,7 @@ const ProductCard: React.FC<ProductCard> = ({ data, params }) => {
 				</div>
 				<div className="px-4 py-2 flex flex-col gap-1">
 					<div className="text-xl">
-						<p>{data.name}</p>
+						<p>{truncatedName}</p>
 					</div>
 					<div className="font-bold text-stone-950">
 						<p>

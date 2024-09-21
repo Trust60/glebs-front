@@ -40,6 +40,7 @@ export async function generateMetadata({
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
 	const t = await getTranslations();
 	const product = await getProduct(params.productId);
+	console.log(product);
 	const suggestedProducts = await getProducts({
 		categoryId: product?.category?.id,
 		currentProductId: params.productId,
