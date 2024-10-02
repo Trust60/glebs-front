@@ -44,19 +44,34 @@ export default async function AboutPage({ params }: Props) {
 
 					<p className="mb-4">
 						{t(
-							'your-trusted-partner-in-drone-backpacks-we-proudly-present-ourselves-as-a-manufacturer-that-not-only-creates-but-also-brings-to-life-ideas-and-innovations-for-those-who-are-diving-into-the-world-of-drones',
+							'dronetorba-workshop-is-a-ukrainian-manufacturer-of-secure-backpacks-and-bags-for-drones-we-offer-comfortable-and-reliable-backpacks-of-various-sizes-for-dji-mavic-autel-and-fpv-we-also-manufacture-starlink-backpacks-and-medical-backpacks-our-products-combine-high-quality-materials-thoughtful-construction-and-ergonomic-design-to-provide-the-best-protection-for-your-equipment-in-extreme-conditions',
+						)}{' '}
+					</p>
+
+					<p className='font-semibold'>
+						{t('advantages-of-our-drone-bags')}
+					</p>
+
+					<p className="mb-4">
+						{t(
+							'materials-all-products-are-made-of-high-quality-1000d-nylon-cordura-with-irr-treatment-not-glowing-in-the-dark-there-are-quality-certificates-high-density-belt-straps-zippers-and-runners-of-ucc-or-equivalent-velcro-nylon-velcro-polyester-lining-plastic-fittings-from-a-ukrainian-manufacturer-polyacetal', 
 						)}{' '}
 					</p>
 
 					<p className="mb-4">
 						{t(
-							'our-mission-is-not-just-to-sell-backpacks-but-also-to-create-high-quality-and-functional-products-that-meet-all-the-needs-and-requirements-of-modern-drone-pilots-we-believe-in-combining-style-comfort-and-reliability-in-every-piece-that-leaves-our-production-facilities-production-facilities',
+							'protection-all-external-parts-walls-back-lids-are-sewn-with-2-mm-plastic-specially-designed-by-a-ukrainian-manufacturer-for-backpack-frames-this-provides-reliable-protection-for-the-contents-of-the-backpack-for-example-if-a-machine-gun-falls-on-it-strong-seams-and-high-quality-materials-allow-the-backpack-to-serve-for-a-long-time-even-in-military-conditions',
 						)}{' '}
 					</p>
 
+					<p className="mb-4">
+						{t(
+							'modularity-all-internal-dividers-are-modular-with-velcro-closures-the-configuration-of-the-main-compartment-is-customized-to-your-needs-the-inner-membranes-are-half-10-mm-high-density-polyethylene-foam-the-other-half-is-2-mm-plastic-and-a-5-mm-layer-of-isolon-with-a-set-of-membranes-installed-the-backpack-can-withstand-a-load-of-60-kg-without-critical-deformation',
+						)}{' '}
+					</p>
 					<p>
 						{t(
-							'dronetorba-is-not-just-a-brand-name-it-is-a-creative-space-where-ideas-are-born-and-dreams-come-true-we-dont-resell-we-design-and-sew-our-own-products-putting-our-love-of-aviation-and-desire-to-give-our-customers-something-special-into-each-design',
+							'drone-bags-are-not-as-noticeable-as-standard-dji-mavic-bags-and-autel-cases-the-shape-is-not-as-recognizable-and-we-sew-them-in-different-colors-8-camouflage-and-5-plain-colors-specify-if-necessary-so-our-aerial-reconnaissance-men-attract-less-attention-of-the-enemy',
 						)}
 					</p>
 				</div>

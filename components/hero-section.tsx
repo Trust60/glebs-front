@@ -28,7 +28,7 @@ export default function App() {
         modules={[Autoplay]}
       >
         <SwiperSlide>
-          <div className="w-full 2xl:h-[80vh]">
+          <div className="w-full 2xl:h-[80vh] relative">
             <Image
               src={img1}
               fill
@@ -36,6 +36,11 @@ export default function App() {
               priority={true}
               alt="banner-image"
             />
+            <div className="absolute z-20 bottom-6 right-3/4">
+				      <Link href={`/category`}>
+ 				        <Button className="text-base xl:text-2xl px-5 py-2 bg-white text-green-800">{t('pridbati')}</Button>
+ 				      </Link>
+ 			      </div>
           </div>
           <div className="w-full h-[70vh] xl:hidden">
             <Image
@@ -56,6 +61,11 @@ export default function App() {
               priority={true}
               alt="banner-image"
             />
+            <div className="absolute z-20 bottom-6 left-3/4">
+				      <Link href={`/category`}>
+ 				        <Button className="text-base xl:text-2xl px-5 py-2 bg-white text-green-800">{t('pridbati')}</Button>
+ 				      </Link>
+ 			      </div>
           </div>
           <div className="w-full h-[70vh] xl:hidden">
             <Image
@@ -76,6 +86,11 @@ export default function App() {
               priority={true}
               alt="banner-image"
             />
+            <div className="absolute z-20 bottom-6 left-3/4">
+				      <Link href={`/category`}>
+ 				        <Button className="text-base xl:text-2xl px-5 py-2 bg-white text-green-800">{t('pridbati')}</Button>
+ 				      </Link>
+ 			      </div>
           </div>
           <div className="w-full h-[70vh] xl:hidden">
             <Image
@@ -88,11 +103,6 @@ export default function App() {
           </div>
         </SwiperSlide>
       </Swiper>
- 			<div className="absolute z-20 bottom-1/4 left-3/4">
-				<Link href={`/category`}>
- 				<Button className="text-base xl:text-2xl px-5 py-2 bg-gradient-to-r from-green-800 to-lime-600">{t('pridbati')}</Button>
- 				</Link>
- 			</div>
     </div>
   );
 }

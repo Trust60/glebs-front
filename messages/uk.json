@@ -3,9 +3,7 @@
   "product-catalog": "Каталог товарів",
   "main": "Головна",
   "contact": "Контакти",
-  "your-trusted-partner-in-drone-backpacks-we-proudly-present-ourselves-as-a-manufacturer-that-not-only-creates-but-also-brings-to-life-ideas-and-innovations-for-those-who-are-diving-into-the-world-of-drones": "Ваш надійний партнер у виробництві рюкзаків для дронів. Ми з гордістю представляємо себе як виробника який не тільки створює, а й втілює в життя ідеї та інновації для тих, хто занурюється у світ дронів.",
   "welcome-to-the-dronotorbas-world": "Ласкаво просимо в світ DроноTорби!",
-  "our-mission-is-not-just-to-sell-backpacks-but-also-to-create-high-quality-and-functional-products-that-meet-all-the-needs-and-requirements-of-modern-drone-pilots-we-believe-in-combining-style-comfort-and-reliability-in-every-piece-that-leaves-our-production-facilities-production-facilities": "Наша місія - не просто продавати рюкзаки, а й створювати якісні та функціональні продукти, які відповідають усім потребам та вимогам сучасних пілотів дронів. Ми віримо в поєднання стилю, комфорту та надійності в кожному виробі, що виходить з наших виробничих потужностей.",
   "about-us": "Про нас",
   "information-about-us": "Інформація про нас:",
   "name": "Назва",
@@ -162,7 +160,6 @@
   "11-3-the-parties-have-the-right-to-terminate-this-agreement-unilaterally-in-case-of-non-fulfillment-by-one-of-the-parties-of-the-terms-of-this-agreement-and-in-cases-provided-for-by-the-current-legislation-of-ukraine": "11.3. Сторони мають право розірвати цей Договір в односторонньому порядку, у разі невиконання однією із сторін умов цього Договору та у випадках, передбачених чинним законодавством України.",
   "terms-and-definitions": "Терміни та визначення",
   "no-results-found": "Нічого не знайдено.",
-  "dronetorba-is-not-just-a-brand-name-it-is-a-creative-space-where-ideas-are-born-and-dreams-come-true-we-dont-resell-we-design-and-sew-our-own-products-putting-our-love-of-aviation-and-desire-to-give-our-customers-something-special-into-each-design": "DроноТорба — це не просто бренд, це креативний простір, де народжуються ідеї та здійснюються мрії. Ми не перепродуємо, ми розробляємо та шиємо власні вироби, вкладаючи в кожен дизайн нашу любов до авіації та бажання дати нашим клієнтам щось особливе.",
   "about-dronotorba": "Про ДроноТорба",
   "dronotorba-seo": "Дроноторба",
   "vash-nadiinii-partner-u-virobnictvi-ryukzakiv-dlya-droniv": "Ваш надійний партнер у виробництві рюкзаків для дронів",
@@ -250,5 +247,11 @@
   "we-are-proud-to-introduce-ourselves-as-a-manufacturer-of-drone-backpacks": "Ми з гордістю представляємо себе як виробника рюкзаків для дронів",
   "Liter": "л",
   "kg": "кг",
-  "sm": "см"
+  "sm": "см",
+  "advantages-of-our-drone-bags": "Переваги наших Дроноторб:",
+  "materials-all-products-are-made-of-high-quality-1000d-nylon-cordura-with-irr-treatment-not-glowing-in-the-dark-there-are-quality-certificates-high-density-belt-straps-zippers-and-runners-of-ucc-or-equivalent-velcro-nylon-velcro-polyester-lining-plastic-fittings-from-a-ukrainian-manufacturer-polyacetal": "Матеріали: всі вироби пошиті з високоякісної нейлонової кордури 1000D з IRR-обробкою (не світиться у ПНБ), є сертифікати якості. Ремінні стрічки високої щільності, блискавки та бігунки УКК або аналоги. Велкро-нейлон, велкро-підкладка поліестер. Пластикова фурнітура українського виробника, поліацетал.",
+  "protection-all-external-parts-walls-back-lids-are-sewn-with-2-mm-plastic-specially-designed-by-a-ukrainian-manufacturer-for-backpack-frames-this-provides-reliable-protection-for-the-contents-of-the-backpack-for-example-if-a-machine-gun-falls-on-it-strong-seams-and-high-quality-materials-allow-the-backpack-to-serve-for-a-long-time-even-in-military-conditions": "Захист: у всі зовнішні деталі (стінки, спинка, кришки) вшитий пластик 2 мм, спеціально розроблений українським виробником для каркасів рюкзаків. Це забезпечує надійний захист вмісту рюкзака, наприклад, при падінні на нього автомату. Міцні шви та високоякісні матеріали дозволяють рюкзаку довго прослужити навіть у військових умовах.",
+  "modularity-all-internal-dividers-are-modular-with-velcro-closures-the-configuration-of-the-main-compartment-is-customized-to-your-needs-the-inner-membranes-are-half-10-mm-high-density-polyethylene-foam-the-other-half-is-2-mm-plastic-and-a-5-mm-layer-of-isolon-with-a-set-of-membranes-installed-the-backpack-can-withstand-a-load-of-60-kg-without-critical-deformation": "Модульність: всі внутрішні перетинки –  модульні, на липучках-велкро. Конфігурація основного відділення налаштовується вами під ваші потреби. Внутрішні перетинки – половина 10 мм спінений поліетилен високої щільності, друга половина пластик 2 мм та шар ізолону 5 мм. При встановленому наборі перетинок рюкзак витримує навантаження 60+ кг без критичної деформації.",
+  "drone-bags-are-not-as-noticeable-as-standard-dji-mavic-bags-and-autel-cases-the-shape-is-not-as-recognizable-and-we-sew-them-in-different-colors-8-camouflage-and-5-plain-colors-specify-if-necessary-so-our-aerial-reconnaissance-men-attract-less-attention-of-the-enemy": "Дроноторби не такі помітні, як стандартні сумки DJI Мавік і кофри Аутель. Не така впізнавана форма, до того ж ми шиємо у різних кольорах  ( 8 камуфляжів та 5 однотонних, уточнюйте за потреби). Тож наші аеророзвідники менше привертають увагу ворога.",
+  "dronetorba-workshop-is-a-ukrainian-manufacturer-of-secure-backpacks-and-bags-for-drones-we-offer-comfortable-and-reliable-backpacks-of-various-sizes-for-dji-mavic-autel-and-fpv-we-also-manufacture-starlink-backpacks-and-medical-backpacks-our-products-combine-high-quality-materials-thoughtful-construction-and-ergonomic-design-to-provide-the-best-protection-for-your-equipment-in-extreme-conditions": "Майстерня «ДроноТорба» – український виробник захищених рюкзаків і сумок для дронів. Ми пропонуємо зручні та надійні наплічники різних розмірів для DJI Mavic, Autel і FPV. Також виготовляємо рюкзаки-кофри для Starlink і медичні рюкзаки. Наша продукція поєднує високу якість матеріалів, продуману конструкцію та ергономічний дизайн, що забезпечує найкращий захист вашої техніки в екстремальних умовах."
 }
